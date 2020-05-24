@@ -40,7 +40,7 @@ class YoutubeClient(object):
     def get_playlists(self):    #from youtube
         request = self.youtube_client.playlists().list( #function that youtube api has that gets all the playlists
             part="id, snippet", #specify what data you want from the playlist
-            maxResults = 50,    #max of 50 playlists
+            maxResults = 100,    #max of 100 playlists
             mine = True         #get our own playlists, not someone else's
         )
         response = request.execute()    #execute the snippet above
@@ -53,7 +53,7 @@ class YoutubeClient(object):
         request = self.youtube_client.playlistItems().list( #function that gets videos from playlist
             playlistId = playlist_id,
             part="id, snippet",
-            maxResults = 50
+            maxResults = 100
         )
         response = request.execute()  # execute the snippet above
 
