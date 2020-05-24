@@ -13,12 +13,12 @@ def run():
 
     for index, playlist in enumerate(playlists):
         print(f"{index}: {playlist.title}")
-    choice = int(input("Enter your choice: "))  #let them pick playlist with a number to make it easy
+    choice = int(input("Choose a playlist to transfer songs to Spotify from: "))  #let them pick playlist with a number to make it easy
     chosen_playlist = playlists[choice]
     print(f"You selected {chosen_playlist.title}")
 
     songs = youtube_client.get_videos_from_playlist(chosen_playlist.id) #try getting as many songs as there are
-    print(f"Attempting to add {len(songs)}")
+    print(f"Attempting to add {len(songs)} songs to Spotify")
 
     for song in songs:
        # spotify_token = input("Enter your Spotify token: ")
