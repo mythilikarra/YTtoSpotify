@@ -1,7 +1,7 @@
 import os
 
-from spotify_client import SpotifyClient
-from youtube_client import YoutubeClient
+from Spotify import SpotifyClient
+from Youtube import YoutubeClient
 
 if __name__ == '__main__':
     run()
